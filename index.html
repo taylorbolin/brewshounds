@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>BrewsHounds</title>
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fffff1;
+		margin:0;
+		padding:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+		background: -webkit-gradient(linear, top left, bottom left, from(#c0d7ce), to(#81aeab));
+		background: -webkit-linear-gradient(#c0d7ce, #81aeab);
+		background: linear-gradient(#c0d7ce,#81aeab);
+	}
+
+	#section1{
+		background: -webkit-gradient(linear, top left, bottom left, from(#81aeab), to(#418688));
+		background: -webkit-linear-gradient(#81aeab, #418688);
+		background: linear-gradient(#81aeab,#418688);
+	}
+
+	#section2{
+		background: -webkit-gradient(linear, top left, bottom left, from(#418688), to(#025d65));
+		background: -webkit-linear-gradient(#418688, #025d65);
+		background: linear-gradient(#418688,#025d65);
+	}
+
+
+
+ 	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background: -webkit-gradient(linear, top left, bottom left, from(#3abb5d), to(#34a853));
+		background: -webkit-linear-gradient(#3abb5d, #34a853);
+		background: linear-gradient(#3abb5d,#34a853);
+	}
+	#slide2{
+		background: -webkit-gradient(linear, top left, bottom left, from(#3abb5d), to(#34a853));
+		background: -webkit-linear-gradient(#3abb5d, #34a853);
+		background: linear-gradient(#3abb5d,#34a853);
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage();
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section" id="section0"><h1>BrewsHounds</h1></div>
+	  <!--   <div class="slide" id="slide1"><h1>BrewsHounds</h1></div>
+	    <div class="slide" id="slide1"><h1>Pics of dogs</h1></div>
+	    <div class="slide" id="slide1"><h1>More pics of dogs</h1></div>
+	</div> -->
+	<div class="section" id="section1"><h1>Registration</h1></div>
+	<div class="section" id="section2"><h1>Rules</h1></div>
+</div>
+
+
+</body>
+</html>
