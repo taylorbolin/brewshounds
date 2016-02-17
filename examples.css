@@ -1,4 +1,4 @@
-/*@CHARSET "ISO-8859-1";
+@CHARSET "ISO-8859-1";
 /* Reset CSS
  * --------------------------------------- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
@@ -34,7 +34,7 @@ caption,th {
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     font-size: 100%;
-    margin:0;
+    /*margin:0;*/
     padding:0;
     color:#444;
 }
@@ -46,7 +46,7 @@ abbr,acronym { border: 0;
 
 
 /* Custom CSS
- * --------------------------------------- 
+ * --------------------------------------- */
 body{
 	font-family: arial,helvetica;
 	color: #333;
@@ -76,33 +76,37 @@ p{
 	display:inline-block;
 	margin: 10px;
 	color: #000;
-	background:#fff;
+	/*background:#fff;
 	background: rgba(255,255,255, 0.5);
 	-webkit-border-radius: 10px;
-            border-radius: 10px;
+            border-radius: 10px;*/
 }
-#menu li.active{
+/*#menu li.active{
 	background:#666;
 	background: rgba(0,0,0, 0.5);
 	color: #fff;
-}
+}*/
 #menu li a{
 	text-decoration:none;
 	color: #000;
 }
 #menu li.active a:hover{
-	color: #000;
+	/*color: #000;*/
+	color:#444;
+	
 }
 #menu li:hover{
-	background: rgba(255,255,255, 0.8);
+	/*background: rgba(255,255,255, 0.8);*/
+	/*text-decoration:underline;*/
+	color:#444;
 }
 #menu li a,
-#menu li.active a{
+/*#menu li.active a{
 	padding: 9px 18px;
 	display:block;
-}
+}*/
 #menu li.active a{
-	color: #fff;
+	color: #463F37;
 }
 #menu{
 	position:fixed;
@@ -113,8 +117,12 @@ p{
 	width: 100%;
 	padding: 0;
 	margin:0;
+	text-align: center;
 }
-.twitter-share-button{
+#section0{
+	background-image: url("http://i.imgur.com/bwGFXay.jpg");
+}
+/*.twitter-share-button{
 	position: fixed;
 	z-index: 99;
 	right: 149px;
@@ -229,7 +237,7 @@ p{
 	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
 	padding: 0 0 5px 0;
-}
+}*/
 
 
 

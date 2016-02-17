@@ -1,113 +1,182 @@
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>BrewsHounds</title>
-	<meta name="Resource-type" content="Document" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Normal Scrolling - fullPage.js</title>
+  <meta name="author" content="Alvaro Trigo Lopez" />
+  <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+  <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+  <meta name="Resource-type" content="Document" />
 
 
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="examples.css" />
-	<link rel="stylesheet" type="text/css" href="styles.css" />
-	<link href='/ostrich-sans%202/ostrich-regular.ttf' rel='stylesheet' type='text/css'>
-	<style>
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+  <style>
 
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 5em;
-		font-family: ostrich-regular;
-		color: #fffff1;
-		margin:0;
-		padding:0;
-	}
-	.intro p{
-		color: #fff;
-	}
+  /* Style for our header texts
+  * --------------------------------------- */
+  h1{
+    font-size: 5em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+  }
+  .intro p{
+    color: #fff;
+  }
 
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
+  /* Centered texts in each section
+  * --------------------------------------- */
+  .section{
+    text-align:center;
+  }
 
 
+  /* Bottom menu
+  * --------------------------------------- */
+  #infoMenu li a {
+    color: #fff;
+  }
+  </style>
 
-	/* Defining each section background and styles
-	* --------------------------------------- */
-	#section0{
-		background: -webkit-gradient(linear, top left, bottom left, from(#c0d7ce), to(#81aeab));
-		background: -webkit-linear-gradient(#c0d7ce, #81aeab);
-		background: linear-gradient(#c0d7ce,#81aeab);
-	}
+  <!--[if IE]>
+    <script type="text/javascript">
+       var console = { log: function() {} };
+    </script>
+  <![endif]-->
 
-	#section1{
-		background: -webkit-gradient(linear, top left, bottom left, from(#81aeab), to(#418688));
-		background: -webkit-linear-gradient(#81aeab, #418688);
-		background: linear-gradient(#81aeab,#418688);
-	}
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	#section2{
-		background: -webkit-gradient(linear, top left, bottom left, from(#418688), to(#025d65));
-		background: -webkit-linear-gradient(#418688, #025d65);
-		background: linear-gradient(#418688,#025d65);
-	}
+  <script type="text/javascript" src="jquery.slimscroll.min.js"></script>
 
+  <script type="text/javascript" src="jquery.fullPage.min.js"></script>
+  <script type="text/javascript" src="examples.js"></script>
 
-
- 	/*Adding background for the slides
-	* --------------------------------------- */
-	#slide1{
-		background: -webkit-gradient(linear, top left, bottom left, from(#c0d7ce), to(#81aeab));
-		background: -webkit-linear-gradient(#c0d7ce, #81aeab);
-		background: linear-gradient(#c0d7ce,#81aeab);
-	}
-	#slide2{
-		background: -webkit-gradient(linear, top left, bottom left, from(#c0d7ce), to(#81aeab));
-		background: -webkit-linear-gradient(#c0d7ce, #81aeab);
-		background: linear-gradient(#c0d7ce,#81aeab);
-	}
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
-	</style>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="jquery.fullPage.js"></script>
-	<script type="text/javascript" src="examples.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage();
-		});
-	</script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        menu: '#menu',
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
+        sectionsColor: ['#DEDDD9', '#DEDDD9', '#DEDDD9', '#DEDDD9', '#DEDDD9', '#DEDDD9', '#DEDDD9'],
+        autoScrolling: false
+      });
+    });
+  </script>
 
 </head>
 <body>
 
+<!-- <a href="https://github.com/alvarotrigo/fullPage.js" id="githubLink"><img style="position: fixed;z-index:99; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://alvarotrigo.com/fullPage/" data-text="Great plugin to create fullscreen scrolling websites: http://alvarotrigo.com/fullPage/">Tweet</a> -->
+<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+<ul id="menu">
+  <li data-menuanchor="firstPage" class="active"><a href="#firstPage">BrewHounds</a></li>
+  <li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+  <li data-menuanchor="thirdPage"><a href="#thirdPage">Get Started</a></li>
+  <li data-menuanchor="fourthPage"><a href="#fourthPage">Events</a></li>
+  <li data-menuanchor="fifthPage"><a href="#fifthPage">Taplist</a></li>
+  <li data-menuanchor="sixthPage"><a href="#sixthPage">Rules</a></li>
+  <li data-menuanchor="seventhPage"><a href="#seventhPage">Shop</a></li>
+</ul>
+
 <div id="fullpage">
-	<div class="section" id="section0">
-		<div class="slide" id="slide1"><h1>BrewsHounds</h1></div>
-	    <div class="slide" id="slide1"><img src="https://justdecorate.files.wordpress.com/2014/06/dscn2941.jpg" id="slide_one"></div>
-	    <div class="slide" id="slide1"><h1>More pics of dogs</h1></div>
-	</div>
-	<div class="section" id="section1"><h1>Registration</h1></div>
-	<div class="section" id="section2"><h1>Rules</h1></div>
+
+  <div class="section" id="section0">
+    <div class="intro">
+      <h1>BrewHounds</h1>
+      <!-- <p>autoScrolling:false</p> -->
+    </div>
+  </div>
+  <div class="section" id="section1">
+    <div class="intro">
+      <h1>About</h1>
+      <!-- <p>autoScrolling:false</p> -->
+    </div>
+  </div>
+  <div class="section" id="section2">
+    <div class="intro">
+      <h1>Get Started</h1>
+      <!-- <p>autoScrolling:false</p> -->
+    </div>
+  </div>
+  <div class="section" id="section3">
+    <div class="intro">
+     <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=2fpv7iefqtcs6jlv6tabk2fa1c%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+  <div class="section" id="section4">
+    <div class="intro">
+      <h1>Taplist</h1>
+      <!-- <p>autoScrolling:false</p> -->
+    </div>
+  </div>
+  <div class="section" id="section5">
+    <div class="intro">
+      <h1>Rules</h1>
+      <!-- <p>autoScrolling:false</p> -->
+    </div>
+  </div>
+  <div class="section" id="section6">
+    <div class="intro">
+      <h1>Shop</h1>
+      <!-- <p>autoScrolling:false</p> -->
+    </div>
+  </div>
 </div>
 
+<!-- <div id="infoMenu">
+  
+
+<ul>
+  <li><a href="https://github.com/alvarotrigo/fullPage.js/archive/master.zip">Download</a></li>
+  <li>
+    <a href="#" id="showExamples">Examples</a>
+    <div id="examplesList">
+      <div class="column">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/scrollBar.html">Scroll Bar Enabled</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/normalScroll.html">Normal scrolling</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/continuous.html">Continuous vertical</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/noAnchor.html">Without anchor links (same URL)</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/navigationV.html">Vertical navigation dots</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/navigationH.html">Horizontal navigation dots</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Design</h3>
+        <ul>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/responsive.html">Responsive</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/backgrounds.html">Full backgrounds</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/videoBackground.html">Full background videos</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/autoHeight.html">Auto-height sections</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/gradientBackgrounds.html">Gradient backgrounds</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/scrolling.html">Scrolling inside sections and slides</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/fixedHeaders.html">Adding fixed header and footer</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/oneSection.html">One single section</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Other</h3>
+        <ul>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/apple.html">Animations on scrolling</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/callbacks.html">Callbacks</a></li>
+          <li><a href="http://alvarotrigo.com/fullPage/examples/methods.html">Functions and methods</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </li>
+  <li><a href="https://github.com/alvarotrigo/fullPage.js#fullpagejs">Documentation</a></li>
+  <li><a href="http://alvarotrigo.com/#contact-page">Contact</a></li>
+</ul>
+
+</div> -->
 
 </body>
 </html>
